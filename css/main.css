@@ -1,0 +1,15 @@
+
+header {
+    background-color: #d7d7d7;
+}
+
+
+.film:nth-child(odd){
+    background-color: #61a2a2;
+    color: white;
+}
+
+.film:nth-child(even){
+    background-color:#8a4949;
+    color: white;
+}

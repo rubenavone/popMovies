@@ -1,0 +1,31 @@
+/*Structure du responsive
+    on ajoute la structure générale de notre grid
+    on mettra également nos breakpoint */
+
+.grid-container {
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 1fr 3fr;
+        grid-template-areas: "header header " 
+                          "aside list-film " ;
+        grid-gap: 10px;
+} 
+
+header {
+    grid-area: header;
+}
+
+aside {
+    grid-area: aside;
+}
+
+.list-film {
+    grid-area: list-film;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
