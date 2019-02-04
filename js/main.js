@@ -1,5 +1,3 @@
-console.log('HelloWorld');
-
 
 
 
@@ -56,15 +54,38 @@ let listeFilm = [
     
 ];
 
+//for classique//
+console.log("Affichage for classique \n");
+for (let i = 0; i < listeFilm.length; i++) {
+    const element = listeFilm[i];
+    console.log(`${element.titre}`);
+} 
+
+//for in//
+console.log("Affichage en FOR IN");
+for (const index in listeFilm) {
+    if (listeFilm.hasOwnProperty(index)) {
+        const element = listeFilm[index];
+        console.log(element.titre + "\n");
+    }
+}
+
 //Affichage avec un forEach//
 listeFilm.forEach(element => {
-    console.log(element.titre);
-    console.log(element.realisateur);
-    console.log(element.synopsis);
-    console.log(element.entree);
-    console.log(element.sortie);
+    console.log(`${element.titre}`);
+    console.log(`le réalisateur est ${element.realisateur}`);
+    console.log(`Le synopsis de votre film:\n ${element.synopsis}`);
+    console.log(`Les vente du film: \n ${element.entree}`);
+    console.log(`La date de sortie est: ${element.sortie} \n`);
 });
 
 
 //Affichage sans le for each//
-console.log(listeFilm[0].titre);
+console.log(`Affichage sans le forEach`);
+console.log(listeFilm[0].titre); 
+
+//ci dessous on filtre//
+let filmFilter = listeFilm.filter(listeFilm => listeFilm.entree > 234);
+
+console.log(filmFilter);
+
