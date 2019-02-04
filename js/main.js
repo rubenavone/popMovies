@@ -32,7 +32,7 @@ let listeFilm = [
         titre: "shining",
         realisateur: "stanley kubrick",
         synopsis: "La folie évidement",
-        entree: 700000,
+        entree: 1600,
         sortie: "21 juin 1987"
       },
       //objet2//
@@ -48,7 +48,31 @@ let listeFilm = [
         titre: "Orange mecanique",
         realisateur: "kubrick",
         synopsis: "la folie évidement 3",
-        entree: 65,
+        entree: 1200,
+        sortie: "24 octobre 1823"
+      },
+         //objet4//
+     {
+        titre: "Avatar",
+        realisateur: "James Cameron",
+        synopsis: "la folie évidement 4",
+        entree: 800,
+        sortie: "22 janvier 2006"
+    },
+         //objet5//
+      {
+        titre: "le huitieme jour",
+        realisateur: "je sais pas ",
+        synopsis: "la folie évidement 3",
+        entree: 2500,
+        sortie: "24 octobre 1823"
+      },
+         //objet6//
+      {
+        titre: "Orange mecanique",
+        realisateur: "kubrick",
+        synopsis: "la folie évidement 3",
+        entree: 200,
         sortie: "24 octobre 1823"
       }
     
@@ -85,7 +109,24 @@ console.log(`Affichage sans le forEach`);
 console.log(listeFilm[0].titre); 
 
 //ci dessous on filtre//
-let filmFilter = listeFilm.filter(listeFilm => listeFilm.entree > 234);
+let filmFilter = listeFilm.filter(listeFilm => listeFilm.entree > 1500);
 
 console.log(filmFilter);
 
+
+
+//On utilise la méthode reducer//
+console.log("reducer en action !");
+
+const reducer = (accumulator, listeFilm) => accumulator + listeFilm.entree;
+
+let nombreEntreeTotale = listeFilm.reduce(reducer, 0)
+
+console.log(`${nombreEntreeTotale} tickets vendu en tout`);
+
+//Autre façon de faire le reducer//
+//Et ajout Du filtre ensemble//
+
+let nombreEntree = filmFilter.reduce(function (acc, obj) { return acc + obj.entree; }, 0); // 7
+
+console.log(`${nombreEntree} tickets vendu (filtre pour les film ayant vendu plus de 1500 place seulement)`);
