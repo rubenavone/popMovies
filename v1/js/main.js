@@ -122,11 +122,17 @@ const reducer = (accumulator, listeFilm) => accumulator + listeFilm.entree;
 
 let nombreEntreeTotale = listeFilm.reduce(reducer, 0)
 
-console.log(`${nombreEntreeTotale} tickets vendu en tout`);
+//console.log(`${nombreEntreeTotale} tickets vendu en tout`);
+console.log(nombreEntreeTotale + " ticket vendu en tout");
 
 //Autre façon de faire le reducer//
-//Et ajout Du filtre ensemble//
 
-let nombreEntree = filmFilter.reduce(function (acc, obj) { return acc + obj.entree; }, 0); // 7
+//Et ajout Du filtre ensemble//
+let nombreEntree = filmFilter.reduce(function (acc, obj) { return acc + obj.entree; }, 0); 
 
 console.log(`${nombreEntree} tickets vendu (filtre pour les film ayant vendu plus de 1500 place seulement)`);
+console.log( nombreEntree + "tickets vendu (filtre pour les film ayant vendu plus de 1500 place seulement)");
+
+let titreDeSesMort = document.getElementById("#js-titre");
+
+titreDeSesMort.innerHTML = titreDeSesMort.innerHTML.replace(listeFilm[0].titre);
