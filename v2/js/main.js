@@ -182,7 +182,7 @@ let title = document.querySelector("body");
 
 title.insertAdjacentHTML("afterbegin", "<h1> Liste de film </h1>"); 
 
-title.insertAdjacentHTML("beforeend" , '<footer> Copyright la france </footer>')
+title.insertAdjacentHTML("beforeend" , '<footer> Copyright la france </footer>');
 
 //Deux façon d'écrire//
 console.log("hello world " + films[0].titre);
