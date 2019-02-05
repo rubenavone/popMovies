@@ -1,0 +1,22 @@
+.list-film {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+}
+.list-film > div:nth-child(odd){
+    background-color: #192a56;
+    color: white;
+}
+.list-film > div:nth-child(even){
+    background-color: #e84118;
+}
+.list-film > div {
+    text-align: center;
+}
+h1 {
+    text-align:center;
+}
+
+
+
+
