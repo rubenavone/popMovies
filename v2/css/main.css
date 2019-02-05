@@ -1,22 +1,161 @@
+@keyframes rotate {
+    from {
+      transform: rotate(30deg);
+    }
+    to {
+      transform: rotate(-10deg);
+    }
+  }
+  
+@keyframes rotate-barre-blue {
+    from {
+      opacity: 0;
+      width: 0;
+    }
+    to {
+      opacity: 100%;
+      width: 40%;
+    }
+}
+  
+@keyframes rotate-barre-red {
+    from {
+      opacity: 0;
+      width: 0;
+    }
+    to {
+      opacity: 100;
+      width: 60%;
+    }
+}
+  
+@keyframes rotate-barre-pink {
+    from {
+      opacity: 0;
+      width: 0;
+    }
+    to {
+      opacity: 100;
+      width: 80%;
+    }
+}
+
+body {
+    display: grid;
+    grid-template-columns: 20% 1fr 1fr;
+    grid-gap: 20px;
+    grid-template-areas: "header header header"
+                        "aside section section"
+                        "footer footer footer"
+}
+
+aside{
+    background-color: #353b48;
+    grid-area: aside;
+}
+
 .list-film {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px; 
+    grid-area: section;
 }
+
 .list-film > div:nth-child(odd){
     background-color: #192a56;
     color: white;
 }
+
 .list-film > div:nth-child(even){
     background-color: #e84118;
 }
+
 .list-film > div {
     text-align: center;
 }
+
 h1 {
     text-align:center;
 }
 
-
-
+footer {
+    grid-area: footer;
+    
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+  
+ header {
+    border-radius: 2%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-area: header; 
+    height: 110px;
+  }
+  
+ header>img {
+     position: relative;
+    transform: rotate(30deg);
+    width: 10vw;
+    animation: rotate 2s forwards;
+    z-index: 2;
+  }
+  
+  .barre {
+    margin-top: 4%;
+    margin-left: -32vw;
+    
+  }
+  
+  .barre .blue {
+    width: 0;
+    z-index: 0;
+    animation-name: rotate-barre-blue;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+  
+  .barre .red {
+    width: 0;
+    z-index: 0;
+    animation-name: rotate-barre-red;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+  
+  .barre .pink {
+    width: 0;
+    z-index: 0;
+    animation-name: rotate-barre-pink;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+  
+  .blue {
+    height: 4vh;
+    background-color: #61a2a2;
+  }
+  
+  .red {
+    height: 4vh;
+    background-color: #8a4949;
+  }
+  
+  .pink {
+    height: 4vh;
+    background-color: #d7d7d7;
+  }
+  
+  li {
+      padding-top: 2%;
+      margin-top: 2%;
+      font-size: 30px;
+      list-style-type: none;
+      color: white;
+      text-shadow: 2px 2px 2px black; 
+  }
 
