@@ -61,16 +61,16 @@ aside{
     grid-area: section;
 }
 
-.list-film > div:nth-child(odd){
+.list-film > article:nth-child(odd){
     background-color: #192a56;
     color: white;
 }
 
-.list-film > div:nth-child(even){
+.list-film > article:nth-child(even){
     background-color: #e84118;
 }
 
-.list-film > div {
+.list-film > article {
     text-align: center;
 }
 
